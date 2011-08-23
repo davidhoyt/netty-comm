@@ -6,9 +6,9 @@
 >
 	<name>netty-comm</name>
 	
-	<groupId>org.jboss.netty</groupId>
+	<groupId>com.github.davidhoyt</groupId>
 	<artifactId>netty-comm</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.1-RC1</version>
 	<inceptionYear>2011</inceptionYear>
 	<url>https://github.com/davidhoyt/netty-comm</url>
 	<description>
@@ -20,6 +20,17 @@
 		<connection>scm:git:git://github.com/davidhoyt/netty-comm.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/davidhoyt/netty-comm.git</developerConnection>
 	</scm>
+	
+	<distributionManagement>
+		<repository>
+			<id>dist-release-repo</id>
+			<url>https://raw.github.com/davidhoyt/mvn-repo/master/maven2/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>dist-snapshot-repo</id>
+			<url>https://raw.github.com/davidhoyt/mvn-repo/master/maven2/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 	
 	<developers>
 		<developer>
@@ -37,13 +48,6 @@
 	</developers>
 	
 	<dependencies>
-		<dependency>
-			<groupId>com.github.comm</groupId>
-			<artifactId>comm</artifactId>
-			<version>0.0.1</version>
-			<scope>compile</scope>
-		</dependency>
-		
 		<dependency>
 			<groupId>org.jboss.netty</groupId>
 			<artifactId>netty</artifactId>
@@ -63,6 +67,12 @@
 			<artifactId>junit</artifactId>
 			<version>4.8.2</version>
 			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>comm</artifactId>
+			<version>0.0.1-RC1</version>
 		</dependency>
 	</dependencies>
 	
